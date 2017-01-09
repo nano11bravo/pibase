@@ -58,7 +58,7 @@ uname = get_uname()
 
 url = "http://sdw.seven-labs.com/pi/"
 method = "POST"
-params = {"k": "2Vh0OTlIE/zSgiYlkTMg2w==", "cpu_temp": getCPUtemperature(), "cpu_usage": getCPUuse(), "disk_space": getDiskSpace(), "ram_info": getRAMinfo(), "mac_address": get_mac(), "device_name": uname[1], "device_kernel": uname[2], "device_type": uname[4]}
+params = {"k": "2Vh0OTlIE/zSgiYlkTMg2w==", "cpu_temp": getCPUtemperature(), "cpu_usage": getCPUuse(), "disk_usage": getDiskSpace()[2], "ram_info": getRAMinfo()[2], "mac_address": get_mac(), "device_name": uname[1], "device_kernel": uname[2], "device_type": uname[4]}
 
 # Fetch the content and response code
 [content, response_code] = fetch_url(url, params, method)
